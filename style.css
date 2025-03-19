@@ -1,0 +1,259 @@
+/* css reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd,
+input {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements get default styles */
+a{
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+  }
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* end of css reset */
+
+/* main font and colours, i guess */
+
+.roboto-mainFonts {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+
+:root {
+    --mainColour : rgb(0, 161, 215);
+    --mainColourDark :  rgb(0, 112, 150);
+    --borderColour: rgb(255,103,64);
+    --borderHighlight : #ff4040;
+    --backgroundColourUnread : rgb(250, 197, 197);
+    --backgroundColourRead : rgba(184, 255, 184, 0.766);
+}
+
+body {
+    font-family: "Roboto",sans-serif;
+}
+
+/* tooltip related css (trial) */
+
+/* Tooltip text */
+.CSStooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    position: absolute;
+    z-index: 1;
+  }
+
+  #checkIcon:hover .CSStooltip,
+  #seeMoreIcon:hover .CSStooltip,
+  #seeOnlineIcon:hover .CSStooltip{ 
+    visibility: visible;
+  }
+
+
+  /* main style on grid padding flex etc. */
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(5,250px);
+    grid-auto-rows: 1fr;
+    gap: 16px;
+    
+    justify-content: center;
+    margin-top: 48px;    
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 12px;
+
+    height: 350px;
+    padding: 16px;
+
+    border-radius: 8px;
+  }
+
+  .read {
+    background-color: var(--backgroundColourRead);
+  }
+
+  .unread {
+    background-color: var(--backgroundColourUnread);
+  }
+
+  .card:hover,
+  .card:focus {
+    outline: 1px solid var(--borderHighlight);
+    border-color: var(--borderHighlight);
+  }
+
+  .title {
+    font-size: xx-large;
+    font-weight: bold;
+  }
+
+  .author {
+    font-size: larger;
+    font-style: italic;
+  }
+
+  .pages {
+    font-size: smaller;
+  }
+
+  .synopsis {
+    font-size: small;
+    font-style: italic;
+
+    margin-top: 12px;
+    max-height: 120px;
+    overflow-y: hidden;
+    overflow-wrap: break-word;
+  }
+
+  .btnContainer {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: auto;
+  }
+  
+  .btnContainer button {
+    border-radius: 4px;
+    width: 100px;
+    height: 32px;
+
+    background-color: var(--mainColour);
+    color: #fff;
+  }
+
+  .holder {
+    background-color: rgb(205, 205, 205);
+  }
+
+  #addBook {
+    width:200px;
+    height: 32px;
+  }
+
+button:hover {
+    background-color: var(--mainColourDark);
+    font-weight: bold;
+}
+
+
+/*style for dialog modal*/
+
+.newBookForm {
+  max-width: 480px;
+  margin: 0;
+  border-radius: 8px;
+  padding: 16px;
+
+  background-color: gainsboro;
+  
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.formInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.radioContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnFormContainer {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.btnFormContainer button {
+  border-radius: 4px;
+  width: 100px;
+  height: 32px;
+
+  background-color: var(--mainColour);
+  color: #fff;
+}
+
+input {
+  border-radius: 4px;
+}
+
+dialog {
+  border-style: none;
+  padding: 0;
+  border-radius: 8px;
+}

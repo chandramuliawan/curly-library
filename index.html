@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javascript.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    </div>
+    <!-- <div class="holder">
+    <div class="title">Sample Title</div>
+    <div class="author">some author</div>
+    <div class="pages">number of pages</div>
+    <div class="synopsis">Some sentences about the book</div>
+    <div class="btnContainer">
+        <button class="status">read</button>
+        <button class="remove">remove</button>
+    </div>
+    </div> -->
+
+    <dialog class="addNewBook">
+        <form class="newBookForm">
+            <fieldset>
+                <legend>Add New Book</legend>
+                <div class="formContainer">
+                    <div class="formInput">
+                        <label for="newTitle">Book Title:</label>
+                        <input type="text" name="newTitle" id="newTitle" required="" autofocus="">
+                    </div>
+                    <div class="formInput">
+                        <label for="newAuthor">Author:</label>
+                        <input type="text" name="newAuthor" id="newAuthor" required="">
+                    </div>
+                    <div class="formInput">
+                        <label for="newPages">No. of Pages:</label>
+                        <input type="number" name="newPages" id="newPages" required="">
+                    </div>
+                    <div class="formInput">
+                        <label for="newSynopsis">Synopsis:</label>
+                        <input type="text" name="newSynopsis" id="newSynopsis">
+                    </div>
+                    <div class="formInput">
+                        <span>Have you read it?</span>
+                        <div class="radioContainer">
+                            <input type="radio" name="newRead" id="newRead" value=1><Label for="newRead">Read</Label>
+                            <input type="radio" name="newRead" id="newNotRead" value=0><Label for="newNotRead">Not Read</Label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="btnFormContainer">
+                <div><button class="closeDialog" type="button">Cancel</button></div>
+                <div><button class="submitNewBook" type="submit">Submit</button></div>
+            </div>
+        </form>
+    </dialog>
+</body>
+</html>
